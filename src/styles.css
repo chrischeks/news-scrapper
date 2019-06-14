@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+.link{
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
