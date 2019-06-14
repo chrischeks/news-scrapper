@@ -7,13 +7,19 @@ import { NewsDetailService } from '../news-detail.service';
   styleUrls: ['./punch-display.component.css']
 })
 export class PunchDisplayComponent implements OnInit {
+  newsDetail;
 
-  
-  constructor(private newService: NewsDetailService) { 
-    
+  constructor(private newService: NewsDetailService) {
+
   }
 
   ngOnInit() {
+    this.fetchNewsDetail();
+  }
+
+  fetchNewsDetail() {
+    this.newsDetail = this.newService.getNewsDetail();
+    console.log(this.newsDetail);
   }
 
 }

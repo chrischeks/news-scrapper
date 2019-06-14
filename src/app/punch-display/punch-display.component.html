@@ -1,4 +1,4 @@
-<div class="card adjust" >
+<!-- <div class="card adjust" >
     <img class="card-img-top" src="news" alt="Card image">
     <div class="card-body">
       <div *ngFor= 'let news of newService.newsStory'></div>
@@ -6,4 +6,16 @@
       <p class="card-text">news.story</p>
       <a href="#" class="btn btn-primary">See Profile</a>
     </div>
-  </div>
+  </div> -->
+
+  <div class="card adjust text-center" >
+
+    <h6 *ngIf="!newsDetail">No content to diplay</h6>
+
+      <div *ngIf="newsDetail" class="card-body">
+        <h4 class="card-title">{{newsDetail.title}}</h4>
+        <p class="card-text">{{newsDetail.body}}</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+
